@@ -7,41 +7,43 @@
 </head>
 <body>
     <script>
-        function suma(a,b){
+        //funciones matematicas
+        function sumar(a,b){
             return a+b;
         }
-        function resta(a,b){
+        function restar(a,b){
             return a-b;
         }
         function multi(a,b){
             return a*b;
         }
-        function div(a,b){
+        function divi(a,b){
             return a/b;
         }
+        //funcion calculadora 
         function calculadora(n1,n2,operacion){
             switch(operacion){
-                case 'suma' :
-                    return suma(n1,n2);
-                case 'resta' :
-                    return resta(n1,n2);
-                case 'multi' :
+                case 'sumar':
+                    return sumar(n1,n2);
+                case 'restar':
+                    return restar(n1,n2);
+                case 'multi':
                     return multi(n1,n2);
-                case 'div' :
-                    return div(n1,n2);
-                default: 
-                    return "Operación no valida";
+                case 'divi':
+                    return divi(n1,n2);
+                default:
+                    return "Operación no valida...";
             }
         }
-        let numero1=parseFloat(prompt ("Ingresa el primer número: "));
-        let numero2=parseFloat(prompt ("Ingresa el segundo número: "));
-        let operacion=prompt("Ingresa la operación que deseas (suma, resta, multi, div)").toLocaleLowerCase();
+        let numero1=parseFloat(prompt("Ingrese el primer numero: "));
+        let numero2=parseFloat(prompt("Ingrese el segundo numero: "));
+        let operacion=prompt("Ingrese la operacion(sumar, restar, multi,divi)");
+
         let resultado=calculadora(numero1,numero2,operacion);
 
         console.log("El resultado es: "+resultado);
         document.write("El resultado es: "+resultado);
 
     </script>
-
 </body>
 </html>
